@@ -1,5 +1,6 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
+import { withKnobs, object } from '@storybook/addon-knobs/react';
 
 import Task from './Task';
 
@@ -7,6 +8,7 @@ export default {
   component: Task,
   // sidebar title
   title: 'Task',
+  decorators: [withKnobs],
   // exports that end in 'Data' are not stories
   excludeStories: /.*Data$/
 };
@@ -23,10 +25,16 @@ export const actionsData = {
   onArchiveTask: action('onArchiveTask')
 };
 
-export const Default = () => <Task task={{ ...taskData }} {...actionsData} />
+export const Default = () => <Task task={object('task', { ...taskData })} {...actionsData} />
 
 export const Pinned = () => (
   <Task task={{ ...taskData, state: 'TASK_PINNED' }} {...actionsData} />
 );
 
 export const Archived = () => <Task task={{ ...taskData, state: 'TASK_ARCHIVED' }} {...actionsData} />;
+
+const longTitleString = `This task's name is absurdly large. In fact, I think if I keep going I might end up with content overflow. What will happen? The star that represents a pinned task could have text overlapping. The text could cut-off abruptly when it reaches the star. I hope not!`;
+
+export const LongTitle = () => (
+  <Task task={{ ...taskData, title: longTitleString }} {...actionsData} />
+);
