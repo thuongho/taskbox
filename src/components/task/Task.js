@@ -23,7 +23,7 @@ const Task = ({ task: { id, title, state }, onArchiveTask, onPinTask }) => {
           state !== 'TASK_ARCHIVED' && (
             // eslint-disable-next-line jsx-a11y/anchor-is-valid
             <a onClick={() => onPinTask(id)}>
-              <span className="icon-start"></span>
+              <span className={`icon-star`}></span>
             </a>
           )
         }
