@@ -71,7 +71,7 @@ exports[`Storyshots Task Default 1`] = `
       onClick={[Function]}
     >
       <span
-        className="icon-start"
+        className="icon-star"
       />
     </a>
   </div>
@@ -114,7 +114,7 @@ exports[`Storyshots Task Pinned 1`] = `
       onClick={[Function]}
     >
       <span
-        className="icon-start"
+        className="icon-star"
       />
     </a>
   </div>
