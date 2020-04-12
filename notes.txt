@@ -1,0 +1,8 @@
+
+Screens
+-----------------
+Component Driven Development
+start from the bottom
+task -> tasklist -> whole UI screen (InboxScreen)
+
+Apollo / GraphQL / relay

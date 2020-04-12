@@ -72,6 +72,7 @@ PureTaskList.defaultProps = {
   loading: false
 };
 
+// TrackList is a container that PureTaskList presentational component
 export default connect(
   ({ tasks }) => ({
     tasks: tasks.filter(t => t.state === 'TASK_INBOX' || t.state === 'TAST_PINNED')
