@@ -9,6 +9,12 @@ export default {
   // sidebar title
   title: 'Task',
   decorators: [withKnobs],
+  parameters: {
+    assets: [
+      './finger-smoker.gif',
+      './hoo_lee_sheet.jpg'
+    ]
+  },
   // exports that end in 'Data' are not stories
   excludeStories: /.*Data$/
 };
