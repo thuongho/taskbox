@@ -13,7 +13,7 @@ jobs:
       - restore_cache:
           keys:
             - cache-{{ checksum "package.json" }}
-            # fallback to usng the latest cache if no exact match is found
+            # fallback to using the latest cache if no exact match is found
             - cache-
       - run:
           name: Installing Dependencies
