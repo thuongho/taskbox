@@ -9,8 +9,8 @@ token=${GITHUB_DEPLOYMENTS_TOKEN:?"Missing GITHUB_TOKEN environment variable"}
 if ! deployment=$(curl -s \
                   -X POST \
                   -H "Authorization: bearer ${token}" \
-                  -d "{ \"ref\": \"${CIRCLE_SHA1}\", \"environment\": \"Storybook\", \"transient_environment\": true, \"auto_merge\": false, \"requred_contexts\": []}" \
-                  -H "Content-Type: applicatin/json" \
+                  -d "{ \"ref\": \"${CIRCLE_SHA1}\", \"environment\": \"storybook\", \"description\": \"Storybook\", \"transient_environment\": true, \"auto_merge\": false, \"required_contexts\": []}" \
+                  -H "Content-Type: application/json" \
                   "https://api.github.com/repos/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}/deployments"); then
   echo "POSTing deployment status failed, exiting (not failing build)" 1>&2
   exit 1
