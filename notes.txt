@@ -1,3 +1,6 @@
+If you get permission denied on start/end.sh
+git update-index --add --chmod=+x ./tasks/deployment/start.sh
+git update-index --add --chmod=+x ./tasks/deployment/end.sh
 
 Screens
 -----------------
